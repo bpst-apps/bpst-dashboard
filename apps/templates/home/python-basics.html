@@ -1,0 +1,75 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Python Tutorial {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        {% include 'includes/preloader.html' %}
+
+        <!-- Hero -->
+        <!--<section class="section-header">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 text-center">
+                        <h1 class="display-2 mb-3">Blank starter page</h1>
+                        <p>Hello world!</p>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <!-- Hero -->
+        <div class="section-header pb-6 bg-primary text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 text-center">
+                        <h1 class="display-3 mb-4">Problem Statement</h1>
+                        <p class="lead mb-5">The project is based on a simple image cllasification on Leaf Disease Problem, it contains 3 classes of leaf disease, ['angular_leaf_spot', 'bean_rust', 'healthy']. Our task is to predict the class of the image.</p>
+                        <div class="alert bg-secondary align-items-center" role="alert">
+                            <span class="fas fa-info-circle"></span>
+                            <a class="fw-bold text-white text-underline ms-1" href="https://github.com/bpst-apps/leaf-disease-dashbord" target="_blank">See our Documentation</a> for a detailed technical explanation.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Hero -->
+
+        <!--End of Title section-->
+        <div class="section section-md">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-7 mt-5">
+                        <div class="card shadow mb-6">
+                            <div class="card-body px-5 py-5 text-center text-md-left">
+                                <div class="row align-items-center">
+                                    <div>
+                                        <h2 class="mb-3">001 - Data Types</h2>
+                                    </div>
+                                    <div>
+                                        <iframe width="520" height="300"
+                                        src="https://youtube.com/embed/e0ZrpLG27D0"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+{% include 'includes/footer.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}

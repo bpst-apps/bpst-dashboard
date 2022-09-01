@@ -5,7 +5,7 @@ Copyright (c) 2019 - present AppSeed.us
 import os.path
 
 from apps.home import blueprint
-from flask import render_template, request, jsonify
+from flask import render_template, request, send_file
 from flask_login import login_required
 from jinja2 import TemplateNotFound
 
@@ -85,7 +85,7 @@ def get_segment(request):
 #     return np.expand_dims(img, axis=0)
 
 
-# @blueprint.route('/logout')
-# def logout():
-#     logout_user()
-#     return render_template('home/bpst.html')
+@blueprint.route('/bpst-profile')
+def get_profile():
+    cv_path = os.path.join(os.getcwd(), 'profile', 'Bhanu_Pratap_Singh_Thakur_Resume.pdf')
+    return send_file(cv_path, as_attachment=True)

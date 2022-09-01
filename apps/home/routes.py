@@ -9,6 +9,8 @@ from flask import render_template, request, jsonify
 from flask_login import login_required
 from jinja2 import TemplateNotFound
 
+# from flask_login import logout_user
+
 # from werkzeug.utils import secure_filename
 # import tensorflow as tf
 # import numpy as np
@@ -16,13 +18,13 @@ from jinja2 import TemplateNotFound
 
 
 @blueprint.route('/index')
-@login_required
+# @login_required
 def index():
-    return render_template('home/landing-freelancer.html', segment='index')
+    return render_template('home/bpst.html', segment='index')
 
 
 @blueprint.route('/<template>')
-@login_required
+# @login_required
 def route_template(template):
     try:
 
@@ -81,3 +83,9 @@ def get_segment(request):
 #     img = tf.image.resize(image, [224, 224])
 #     img = tf.keras.preprocessing.image.img_to_array(img)
 #     return np.expand_dims(img, axis=0)
+
+
+# @blueprint.route('/logout')
+# def logout():
+#     logout_user()
+#     return render_template('home/bpst.html')
